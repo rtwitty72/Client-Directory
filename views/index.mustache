@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Client Directory</title>
-  </head>
-  <body>
-    <h1>Index</h1>
 
-    <ul>
+<head>
+  <meta charset="utf-8">
+  <title>Client Directory</title>
+  <link rel="stylesheet" href="./main.css" />
+</head>
 
-      {{#users}}
-    <img src="{{avatar}}" alt="">
-      <li id="name">{{name}}</li>
-      <li id="university">{{university}}</li>
-      <li id="job">{{job}}</li>
-      <li id="company">{{company}}</li>
-      {{/users}}
+<body>
+  <h1>Client Directory</h1>
+  <div class="container">
+    {{#users}}
+      <div class="user-container">
+        <img class="avatar-container" src="{{avatar}}" alt="{{name}}">
+        <h3 class="name-container">{{name}}</h3>
+        <p class="description-container">{{^job}}<span class="available">Available for Hire</span>{{/job}}
+          {{#job}}{{job}}, {{company}}{{/job}}
+        </p>
+      </div>
+    {{/users}}
+  </div>
+  <div class="list">
+    <div class="list-container">
+      <div class="left-col">
+        <img class="avatars" src="{{avatar}}" alt="{{name}}">
 
-    </ul>
+      </div>
+      <div class="right-col">
 
-  </body>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
