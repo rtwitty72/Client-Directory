@@ -15,22 +15,12 @@
         <img class="avatar-container" src="{{avatar}}" alt="{{name}}">
         <h3 class="name-container">{{name}}</h3>
         <p class="description-container">{{^job}}<span class="available">Available for Hire</span>{{/job}}
-          {{#job}}{{job}}, {{company}}{{/job}}
+          {{#job}} {{job}}, {{company}}{{/job}}
         </p>
       </div>
     {{/users}}
   </div>
-  <div class="list">
-    <div class="list-container">
-      <div class="left-col">
-        <img class="avatars" src="{{avatar}}" alt="{{name}}">
-
-      </div>
-      <div class="right-col">
-
-      </div>
-    </div>
-  </div>
+  
 </body>
 
 </html>
